@@ -1,0 +1,23 @@
+@font-face {
+font-family: 'smb';
+font-style: normal;
+font-weight: normal;
+src: local('../fonts/Super Mario Bros.'), url('../fonts/Super Mario Bros.woff') format('woff');
+}
+
+body {
+	background-color: #222;	
+	color: #ccc;
+}
+
+.play {
+	margin: 0 20px;
+}
+
+.jumbotron {
+	min-height: 400px;
+	font-family:'smb';
+	font-weight: normal;
+	font-size: 42px;
+	background-color: #000;
+}
