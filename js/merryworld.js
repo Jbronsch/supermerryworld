@@ -1,10 +1,10 @@
 //Strict mode.
 "use strict";
 
-var titleScreen = true;
+var gameState;
 
 //Play/pause button for music.
-document.getElementById("audio").volume = 0.1;
+document.getElementById("audio").volume = 0.5;
 function playPauseButton() {		
 	var playState = document.getElementById("audio");
 	if (playState.paused) {
@@ -17,10 +17,15 @@ function playPauseButton() {
 		document.getElementById("soundbtn").style.background= "#993333";
 	}
 }
+//load game on play
+function playGame() {
+	document.getElementById('gameWindow').style.backgroundImage = "url('img/xwing.jpg')";
+	document.getElementById("audio").src = "music/none.wav";
+	document.getElementById("se").src = "soundeffects/gamestart.wav";
+	document.getElementById("se").play();
+	document.getElementById("gameTitle").style.display= "none";
+	gameState = true;
+//start game
 
-var titleColors = ["red", "green", "blue", "purple", "white"];
-
-for (var i = 0; i < titleColors.length; i++) {
-	document.getElementById("gameTitle").style.color = titleColors[i];
 }
 

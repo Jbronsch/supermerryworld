@@ -1,3 +1,10 @@
+@keyframes titleChange {
+     0%   { color: red; }
+    25%  { color: green; }
+    50%  { color: blue;}
+    100% { color: red; }
+}
+
 @font-face {
 font-family: 'smb';
 font-style: normal;
@@ -10,14 +17,18 @@ body {
 	color: #ccc;
 }
 
-.play {
-	margin: 0 20px;
-}
-
 .jumbotron {
+	min-width: 700px;
 	min-height: 400px;
 	font-family:'smb';
 	font-weight: normal;
 	font-size: 42px;
 	background-color: #000;
+}
+
+
+#gameTitle {
+	animation-name: titleChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }

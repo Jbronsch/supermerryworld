@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>Super Merry World</title>
+    <title>Merry Quest</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
@@ -21,19 +21,22 @@
             <li role="presentation" class="active"><a href="#" onclick="history.go(-1)">Back</a></li>
           </ul>
         </nav>
-        <h3>Super Merry World</h3>
+        <h3>Merry Quest</h3>
       </div>
-      <div class="jumbotron game">
-        <div>
-          <h1 class="game" id="gameTitle">Super Merry World</h1>
-        </div>
+      <div class="jumbotron" id="gameWindow">
+        <h1 class="game" id="gameTitle">Merry Quest</h1>
       </div>
       <div class="text-center">
-         <a class="btn btn-default btn-primary play" href="#" role="button">Play</a>
-         <a class="btn btn-default btn-primary" id="soundbtn" onclick="playPauseButton()">Sound Off</a>
+         <button class="btn btn-default btn-primary play" id="playButton" href="#" role="button" onclick="playGame()">Play</button>
+         <button class="btn btn-default btn-primary" id="soundbtn" onclick="playPauseButton()">Sound Off</button>
       <audio autoplay loop id="audio">
-         <source src="music/smw.mp3" type="audio/mp3">
+         <source src="music/merrytitle.wav" type="audio/mp3">
       </audio>
+      <div id="audiowrap">
+        <audio id="se">
+         <source src="" type="audio/mp3">
+      </audio>
+      </div>
       <div>
       <div class="row marketing">
         <div class="col-lg-12 text-center" >
